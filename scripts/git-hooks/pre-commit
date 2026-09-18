@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Tracked pre-commit hook. Enabled via `git config core.hooksPath scripts/git-hooks`
+# (run `make hooks` once after clone). Blocks commits carrying personal/local-only data.
+exec "$(git rev-parse --show-toplevel)/scripts/check-no-personal.sh"
